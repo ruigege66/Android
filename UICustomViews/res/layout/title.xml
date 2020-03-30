@@ -4,14 +4,15 @@
     android:layout_height="match_parent"
     android:background="@drawable/title_bg"
     >
-    
+    <!-- 这里我们自定义了一个背景图片title_bg，并且在res文件夹中保存了这张图片 -->
+    <!-- 下面的margin即代表外边距，类似于之前学过的HTML/CSS中的属性设置 -->
     <Button 
         android:id="@+id/title_back"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_margin="5dip"
-        android:background="@drawable/back_bg"
+        android:background="@drawable/title_bg"
         android:text="Back"
         android:textColor="#fff"
         />
@@ -32,7 +33,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_margin="5dip"
-        android:background="@drawable/edit_bg"
+        android:background="@drawable/title_bg"
         android:text="Edit"
         android:textColor="#fff" />
 
