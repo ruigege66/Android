@@ -28,6 +28,7 @@ public class MainActivity extends Activity implements OnClickListener{
 			FragmentManager fragmentManager = getFragmentManager();
 			FragmentTransaction transaction = fragmentManager.beginTransaction();
 			transaction.replace(R.id.right_layout,fragment);
+			transaction.addToBackStack(null);
 			transaction.commit();
 			break;
 		default:
