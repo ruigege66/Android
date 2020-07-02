@@ -11,6 +11,9 @@ import android.net.NetworkInfo;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.Button;
 import android.widget.Toast;
 
 public class MainActivity extends Activity {
@@ -27,6 +30,15 @@ public class MainActivity extends Activity {
 		intentFilter.addAction("android.net.conn.CONNECTIVITY_CHANGE");
 		networkChangeReceiver = new NetworkChangeReceiver();
 		registerReceiver(networkChangeReceiver,intentFilter);
+		
+		Button button = (Button) findViewById(R.id.button);
+		button.setOnClickListener(new OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				Intent intent = new Intent("com.example.broadcasttest.MY_BROADCAST");
+				sendBroadcast(intent);
+			}
+		});
 		
 	}
 	
