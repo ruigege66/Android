@@ -20,6 +20,10 @@ public class MainActivity extends Activity {
 	
 	private IntentFilter intentFilter;
 	
+	private LocalReceiver localReceiver;
+	
+	private LocalBroadcastManager localBroadcastManager;
+	
 	private NetworkChangeReceiver networkChangeReceiver;
 	
 	@Override
@@ -36,7 +40,9 @@ public class MainActivity extends Activity {
 			@Override
 			public void onClick(View v) {
 				Intent intent = new Intent("com.example.broadcasttest.MY_BROADCAST");
-				sendBroadcast(intent);
+//				sendBroadcast(intent);
+				//我们关闭上面一行代码，然后写另一种方法sendOrderedBroadcast,发送有序广播
+				sendOrderedBroadcast(intent,null);
 			}
 		});
 		
@@ -59,7 +65,6 @@ public class MainActivity extends Activity {
 			} else {
 				Toast.makeText(context, "network is unavailable", Toast.LENGTH_SHORT).show();
 			}
-
 			
 		}
 	}
