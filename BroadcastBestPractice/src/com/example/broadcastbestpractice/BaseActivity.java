@@ -3,15 +3,15 @@ package com.example.broadcastbestpractice;
 import android.app.Activity;
 import android.os.Bundle;
 
-public class BastActivity extends Activity {
+public class BaseActivity extends Activity {
 	@Override
-	public void onCreate(Bundle savedInstanceState) {
+	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		ActivityCollector.addActivity(this);
 	}
 	
 	@Override
-	public void onDestroy() {
+	protected void onDestroy() {
 		super.onDestroy();
 		ActivityCollector.removeActivity(this);
 	}
