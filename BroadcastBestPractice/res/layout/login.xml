@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- 
-	android:shrinkColumns设置允许被收缩的列序号
-	android:strectColumns设置允许被拉伸的列序号 -->
+
 <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -23,7 +21,7 @@
             android:layout_height="wrap_content"
             android:text="Password:" />
         
-        <EditTest
+        <EditText
             android:id="@+id/password"
             android:layout_height="wrap_content"
             android:inputType="textPassword" />        

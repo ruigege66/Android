@@ -29,7 +29,7 @@ public class LoginActivity extends BaseActivity{
 				String account =accountEdit.getText().toString();
 				String password = passwordEdit.getText().toString();
 				//如果账号是admin，密码是12345,就认为登录成功
-				if(account.contentEquals("admin") && password.equals("12345")) {
+				if(account.equals("admin") && password.equals("12345")) {
 					Intent intent = new Intent(LoginActivity.this,MainActivity.class);
 					startActivity(intent);
 					finish();
@@ -39,7 +39,6 @@ public class LoginActivity extends BaseActivity{
 			}
 			
 		});
-		
 		
 	}
 

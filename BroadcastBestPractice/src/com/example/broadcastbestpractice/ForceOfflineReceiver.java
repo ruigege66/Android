@@ -7,7 +7,7 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.view.WindowManager;
-import android.content.DialogInterface.OnClickListener;;
+import android.content.DialogInterface.OnClickListener;
 
 public class ForceOfflineReceiver extends BroadcastReceiver{
 	@Override
@@ -17,7 +17,8 @@ public class ForceOfflineReceiver extends BroadcastReceiver{
 		dialogBuilder.setMessage("You are forced to be offline,Please try to login again.");
 		dialogBuilder.setCancelable(false);
 		//下面这句改了
-		dialogBuilder.setPositiveButton("OK", new OnClickListener() {
+		dialogBuilder.setPositiveButton("OK", 
+			new DialogInterface.OnClickListener() {
 			@Override
 			public void onClick(DialogInterface dialog,int which) {
 				ActivityCollector.finishAll();//销毁所有的活动
